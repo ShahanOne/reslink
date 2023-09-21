@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       <DashboardLayout>
         <Box
-          px={6}
+          px={{ xs: 2, md: 6 }}
           py={4}
           sx={{
             backgroundColor: '#1F2129',
@@ -53,6 +53,7 @@ export default function Home() {
                   color: '#FEFEFE',
                   textTransform: 'capitalize',
                   borderRadius: '36px',
+                  py: { xs: 3, md: 0 },
                   px: 2,
                   '&:hover': {
                     backgroundColor: '#3FA268',
@@ -60,7 +61,9 @@ export default function Home() {
                 }}
               >
                 <AiOutlinePlus style={{ marginRight: 4, fontSize: 16 }} />{' '}
-                Create New Project
+                <Typography fontSize={14} display={{ xs: 'none', md: 'unset' }}>
+                  Create New Project
+                </Typography>
               </Button>
             </Box>
           </Box>
